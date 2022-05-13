@@ -5,8 +5,8 @@
       <h2>Log in</h2>
       <%= form_with model: @user, url: user_session_path do |f| %>
         <div class="field">
-          <%= f.label :name %><br />
-          <%= f.email_field :name, autofocus: true, autocomplete: "name" %>
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
 
         <div class="field">
@@ -22,7 +22,7 @@
         <% end %>
 
         <div class="actions">
-          <%= f.submit "Log in" %>
+          <%= f.submit "Log in", class:"btn btn-sm btn-primary" %>
         </div>
       <% end %>
 

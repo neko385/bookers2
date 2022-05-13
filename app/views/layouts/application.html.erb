@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>Bookers2</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <script src="https://kit.fontawesome.com/39c0503f9d.js" crossorigin="anonymous"></script>
 
@@ -26,10 +26,10 @@
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
             <li>
-              <!--%= link_to "Home", root_path, class:'nav-link text-ligth' %-->
+              <%= link_to "Home", user_path(current_user.id), class:'nav-link text-ligth' %>
             </li>
             <li>
-              <!--%= link_to "Users", root_path, class:'nav-link text-light' %-->
+              <%= link_to "Users", users_path, class:'nav-link text-light' %>
             </li>
             <li>
               <%= link_to "Books", books_path, class:"nav-link text-light" %>
